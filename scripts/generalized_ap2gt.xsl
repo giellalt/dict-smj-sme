@@ -47,7 +47,7 @@
       <xsl:variable name="current_file" select="(tokenize(document-uri(.), '/'))[last()]"/>
       <xsl:variable name="current_dir" select="substring-before(document-uri(.), $current_file)"/>
       <xsl:variable name="current_location" select="concat($inDir, substring-after($current_dir, $inDir))"/>
-      <xsl:variable name="file_name" select="substring-before($current_file, '.xml')"/>      
+      <xsl:variable name="file_name" select="substring-before($current_file, '.dix')"/>      
 
       <xsl:if test="$debug">
 	<xsl:message terminate="no">

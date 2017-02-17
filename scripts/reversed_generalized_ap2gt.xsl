@@ -47,7 +47,7 @@
       <xsl:variable name="current_file" select="(tokenize(document-uri(.), '/'))[last()]"/>
       <xsl:variable name="current_dir" select="substring-before(document-uri(.), $current_file)"/>
       <xsl:variable name="current_location" select="concat($inDir, substring-after($current_dir, $inDir))"/>
-      <xsl:variable name="file_name" select="substring-before($current_file, '.xml')"/>      
+      <xsl:variable name="file_name" select="substring-before($current_file, '.dix')"/>      
 
       <xsl:if test="$debug">
 	<xsl:message terminate="no">
@@ -99,7 +99,25 @@
 		      </xsl:attribute>
 		    </xsl:if>
 		    
-		    <xsl:copy-of select="normalize-space(./p/r)"/>
+		    <!--xsl:copy-of select="normalize-space(./p/r)"/-->
+		    <xsl:for-each select="./p/r/node()">
+		      <xsl:if test="self::text()">
+			<xsl:value-of select="."/>
+		      </xsl:if>
+		      <xsl:if test="self::* and local-name()='b'">
+			<xsl:value-of select="' '"/>
+		      </xsl:if>
+		      <xsl:if test="self::* and local-name()='g'">
+			<xsl:for-each select="./node()">
+			  <xsl:if test="self::text()">
+			    <xsl:value-of select="."/>
+			  </xsl:if>
+			  <xsl:if test="self::* and local-name()='b'">
+			    <xsl:value-of select="' '"/>
+			  </xsl:if>
+			</xsl:for-each>
+		      </xsl:if>
+		    </xsl:for-each>
 		  </l>
 		</lg>
 		<mg>
@@ -138,8 +156,25 @@
 		      <!--   </xsl:for-each> -->
 		      <!-- </xsl:attribute> -->
 		      
-		      <xsl:copy-of select="normalize-space(./p/l)"/>
-		      
+		      <!--xsl:copy-of select="normalize-space(./p/l)"/-->
+		      <xsl:for-each select="./p/l/node()">
+			<xsl:if test="self::text()">
+			  <xsl:value-of select="."/>
+			</xsl:if>
+			<xsl:if test="self::* and local-name()='b'">
+			  <xsl:value-of select="' '"/>
+			</xsl:if>
+			<xsl:if test="self::* and local-name()='g'">
+			  <xsl:for-each select="./node()">
+			    <xsl:if test="self::text()">
+			      <xsl:value-of select="."/>
+			    </xsl:if>
+			    <xsl:if test="self::* and local-name()='b'">
+			      <xsl:value-of select="' '"/>
+			    </xsl:if>
+			  </xsl:for-each>
+			</xsl:if>
+		      </xsl:for-each>
 		    </t>
 		  </tg>
 		</mg>
