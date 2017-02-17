@@ -145,8 +145,18 @@
 		      <!-- 	</xsl:if> -->
 		      <!--   </xsl:for-each> -->
 		      <!-- </xsl:attribute> -->
-		      
-		      <xsl:copy-of select="normalize-space(./p/r)"/>
+
+
+		      <xsl:for-each select="./p/r/node()">
+			<xsl:if test="self::text()">
+			  <xsl:value-of select="."/>
+			</xsl:if>
+			<xsl:if test="self::* and local-name()='b'">
+			  <xsl:value-of select="' '"/>
+			</xsl:if>
+		      </xsl:for-each>
+
+		      <!--xsl:copy-of select="normalize-space(./p/r)"/-->
 		      
 		    </t>
 		  </tg>
