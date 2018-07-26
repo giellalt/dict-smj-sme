@@ -8967,7 +8967,7 @@ For the full license text, see the link above.</lic><ref>Work by Giellatekno and
          </tg>
       </mg>
    </e>
-   <e>
+   <!--<e>
       <lg>
          <l pos="Comma">,</l>
       </lg>
@@ -8976,7 +8976,7 @@ For the full license text, see the link above.</lic><ref>Work by Giellatekno and
             <t pos="Comma">,</t>
          </tg>
       </mg>
-   </e>
+   </e>-->
    <e>
       <lg>
          <l pos="CS">jut</l>
