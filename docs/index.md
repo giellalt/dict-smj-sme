@@ -1,11 +1,6 @@
-# Documentation for Lule Sámi ⇒ North Sámi
+# Documentation for Lule Saami ⇒ North Saami
 
-Please see [this page](https://giellalt.github.io/dicts/dicts.html) for more general information on how to work with dictionaries, and the various publishing alternatives.
-
-
-# Online dictionaries
-
-- [Lule Saami dictionary page](https://dicts.uit.no/smjdicts.eng.html)
+Please see [this page](https://giellalt.github.io/dicts/index.html) for more general information on how to work with dictionaries, and the various publishing alternatives.
 
 # Other information
 

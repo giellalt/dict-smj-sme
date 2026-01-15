@@ -1,6 +1,6 @@
 # Dictionary for smj — sme
 
-This repository contains source files for a dictionary from Lule Sámi to North Sámi. The content is licensed under the CC-BY-4.0 license.
+This repository contains source files for a dictionary from Lule Saami to North Saami. The content is licensed under the  license.
 
 Many of the dictionaries are published on [sátni.org](https://sátni.org) and [NDS](https://sanit.oahpa.no).
 
